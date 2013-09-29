@@ -1,0 +1,533 @@
+  [1m[36m (127.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (24.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateScreencasts (20130929165738)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130929165738"]]
+  [1m[36m (32.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (74.0ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (20.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (24.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (25.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (98.7ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (57.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (21.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (25.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:11:06', '2013-09-29 17:11:06', 980496669)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:11:06', '2013-09-29 17:11:06', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:11:06', '2013-09-29 17:11:06', 74901944)
+  [1m[36m (25.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (81.1ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (23.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (26.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (25.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (1.8ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:13:31', '2013-09-29 17:13:31', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:13:31', '2013-09-29 17:13:31', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:13:31', '2013-09-29 17:13:31', 74901944)
+  [1m[36m (23.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[36mScreencast Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (101.1ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (29.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (24.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (26.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.7ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:14:15', '2013-09-29 17:14:15', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:14:15', '2013-09-29 17:14:15', 251792062)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:14:15', '2013-09-29 17:14:15', 74901944)
+  [1m[36m (23.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (33.4ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (24.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (22.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (24.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:15:06', '2013-09-29 17:15:06', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:15:06', '2013-09-29 17:15:06', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:15:06', '2013-09-29 17:15:06', 74901944)
+  [1m[36m (22.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (77.1ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (20.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (23.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (22.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (2.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:15:37', '2013-09-29 17:15:37', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:15:37', '2013-09-29 17:15:37', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:15:37', '2013-09-29 17:15:37', 74901944)
+  [1m[36m (24.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.3ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (32.1ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (17.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (25.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (26.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:17:32', '2013-09-29 17:17:32', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:17:32', '2013-09-29 17:17:32', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:17:32', '2013-09-29 17:17:32', 74901944)
+  [1m[36m (35.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (80.4ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (28.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (22.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (23.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:17:54', '2013-09-29 17:17:54', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:17:54', '2013-09-29 17:17:54', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:17:54', '2013-09-29 17:17:54', 74901944)
+  [1m[36m (25.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.3ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.2ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.1ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (70.7ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (22.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (23.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (25.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (1.6ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:18:13', '2013-09-29 17:18:13', 980496669)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:18:13', '2013-09-29 17:18:13', 251792062)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:18:13', '2013-09-29 17:18:13', 74901944)
+  [1m[36m (25.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (89.6ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (37.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (29.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (22.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (74.5ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (19.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (18.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (20.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:19:36', '2013-09-29 17:19:36', 980496669)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:19:36', '2013-09-29 17:19:36', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:19:36', '2013-09-29 17:19:36', 74901944)
+  [1m[36m (440.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.7ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.1ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (37.0ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (18.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (21.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (23.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:20:38', '2013-09-29 17:20:38', 980496669)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:20:38', '2013-09-29 17:20:38', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:20:38', '2013-09-29 17:20:38', 74901944)
+  [1m[36m (24.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.1ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.2ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (81.6ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (27.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (26.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (23.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:21:14', '2013-09-29 17:21:14', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:21:14', '2013-09-29 17:21:14', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:21:14', '2013-09-29 17:21:14', 74901944)
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (36.8ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (22.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (21.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (24.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:23:00', '2013-09-29 17:23:00', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:23:00', '2013-09-29 17:23:00', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:23:00', '2013-09-29 17:23:00', 74901944)
+  [1m[36m (26.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.1ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (31.3ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (22.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (21.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (23.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 17:23:19', '2013-09-29 17:23:19', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 17:23:19', '2013-09-29 17:23:19', 251792062)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 17:23:19', '2013-09-29 17:23:19', 74901944)
+  [1m[36m (28.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[36mScreencast Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[35mScreencast Exists (0.2ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35mScreencast Exists (0.1ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (35.4ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (26.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (24.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.8ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (26.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 18:43:30', '2013-09-29 18:43:30', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 18:43:30', '2013-09-29 18:43:30', 251792062)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 18:43:30', '2013-09-29 18:43:30', 74901944)
+  [1m[36m (28.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------
+ApiScreencastsTest: test_get_/api/screencasts.json
+--------------------------------------------------
+Started GET "/api/screencasts.json" for 127.0.0.1 at 2013-09-29 15:43:30 -0300
+Processing by ScreencastsController#index as JSON
+  [1m[36mScreencast Load (0.4ms)[0m  [1mSELECT "screencasts".* FROM "screencasts"[0m
+Completed 200 OK in 75ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+  [1m[35mScreencast Load (0.2ms)[0m  SELECT "screencasts".* FROM "screencasts"
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+ApiScreencastsTest: test_get_/api/screencasts/:id
+-------------------------------------------------
+  [1m[35mScreencast Load (0.1ms)[0m  SELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1  [["id", 980496669]]
+Started GET "/api/screencasts/980496669.json" for 127.0.0.1 at 2013-09-29 15:43:31 -0300
+Processing by ScreencastsController#show as JSON
+  Parameters: {"id"=>"980496669"}
+  [1m[36mScreencast Load (0.1ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", "980496669"]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[35mScreencast Exists (0.3ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[36mScreencast Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[35mScreencast Load (0.1ms)[0m  SELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1  [["id", 980496669]]
+  [1m[36mScreencast Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (70.9ms)[0m  [1mCREATE TABLE "screencasts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "summary" text, "duration" varchar(255), "link" varchar(255), "published_at" datetime, "source" varchar(255), "video_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (21.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (26.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (25.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130929165738')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "screencasts"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Fast Rails Commands', 'Rails commands, such as generators, migrations, and tests, have a tendency to be slow because they need to load the Rails app each time. Here I show three tools to make this faster: Zeus, Spring, and Commands.', '8:06', 'http://railscasts.com/episodes/412-fast-rails-commands', 'Thu, 04 Apr 2013 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4', '2013-09-29 18:44:54', '2013-09-29 18:44:54', 980496669)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Wizard Forms with Wicked', 'Creating a wizard form can be tricky in Rails. Learn how Wicked can help by turning a controller into a series of multiple steps.', '11:57', 'http://railscasts.com/episodes/346-wizard-forms-with-wicked', 'Thu, 03 May 2012 00:00:00 -0700', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/346-wizard-forms-with-wicked.mp4', '2013-09-29 18:44:54', '2013-09-29 18:44:54', 251792062)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "screencasts" ("title", "summary", "duration", "link", "published_at", "source", "video_url", "created_at", "updated_at", "id") VALUES ('Sending HTML Email', 'HTML email can be difficult to code because any CSS should be made inline. Here I present a few tools for doing this including the premailer-rails3 and roadie gems.', '5:42', 'http://railscasts.com/episodes/312-sending-html-email', 'Mon, 02 Jan 2012 00:00:00 -0800', 'railscasts', 'http://media.railscasts.com/assets/episodes/videos/312-sending-html-email.mp4', '2013-09-29 18:44:54', '2013-09-29 18:44:54', 74901944)
+  [1m[36m (29.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+--------------------------------------------------
+ApiScreencastsTest: test_get_/api/screencasts.json
+--------------------------------------------------
+Started GET "/api/screencasts.json" for 127.0.0.1 at 2013-09-29 15:44:54 -0300
+Processing by ScreencastsController#index as JSON
+  [1m[36mScreencast Load (0.8ms)[0m  [1mSELECT "screencasts".* FROM "screencasts"[0m
+Completed 200 OK in 65ms (Views: 37.4ms | ActiveRecord: 0.8ms)
+  [1m[35mScreencast Load (0.3ms)[0m  SELECT "screencasts".* FROM "screencasts"
+  [1m[36mScreencast Load (0.3ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", 980496669]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+ApiScreencastsTest: test_get_/api/screencasts/:id
+-------------------------------------------------
+  [1m[35mScreencast Load (0.1ms)[0m  SELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1  [["id", 980496669]]
+Started GET "/api/screencasts/980496669.json" for 127.0.0.1 at 2013-09-29 15:44:54 -0300
+Processing by ScreencastsController#show as JSON
+  Parameters: {"id"=>"980496669"}
+  [1m[36mScreencast Load (0.2ms)[0m  [1mSELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1[0m  [["id", "980496669"]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+ScreencastTest: test_should_be_invalid_if_missing_required_data
+---------------------------------------------------------------
+  [1m[35mScreencast Exists (0.1ms)[0m  SELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+ScreencastTest: test_should_be_valid_if_required_data_exists
+------------------------------------------------------------
+  [1m[36mScreencast Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railcasts.com/assetsepisodes/videos/360-facebook-authentication.mp4' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+ScreencastTest: test_should_only_allow_one_screencast_with_the_same_video_url
+-----------------------------------------------------------------------------
+  [1m[35mScreencast Load (0.1ms)[0m  SELECT "screencasts".* FROM "screencasts" WHERE "screencasts"."id" = ? LIMIT 1  [["id", 980496669]]
+  [1m[36mScreencast Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "screencasts" WHERE "screencasts"."video_url" = 'http://media.railscasts.com/assets/episodes/videos/412-fast-rails-commands.mp4' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
